@@ -48,21 +48,6 @@ h1{
     flex:1;
 }
 
-.content h2{
-    margin:10px 0;
-    font-size:18px;
-}
-
-.content p{
-    font-size:14px;
-    color:#555;
-}
-
-.content b{
-    display:block;
-    margin:10px 0;
-}
-
 /* BUTTONS */
 .buttons{
     display:flex;
@@ -89,24 +74,20 @@ button{
     color:white;
 }
 
-/* ================= RESPONSIVE ================= */
-
-/* Tablet */
+/* RESPONSIVE */
 @media (max-width: 992px){
     .container{
         grid-template-columns:repeat(2, 1fr);
     }
 }
 
-/* Mobile */
 @media (max-width: 600px){
     .container{
         grid-template-columns:1fr;
     }
 }
 
-/* ================= WHATSAPP BUTTON ================= */
-
+/* WHATSAPP BUTTON */
 .whatsapp-btn{
     position: fixed;
     bottom: 20px;
@@ -120,7 +101,6 @@ button{
     align-items: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     z-index: 1000;
-    transition: transform 0.3s ease;
 }
 
 .whatsapp-btn img{
@@ -142,7 +122,7 @@ button{
 <div class="container">
 
     <div class="card">
-        <img src="./image1.jpeg">
+        <img src="image1.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Chanderi Cotton</h2>
             <p>Premium soft Chanderi cotton saree with floral weaving.</p>
@@ -155,7 +135,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image2.jpeg">
+        <img src="image2.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Pure Georgette Saree</h2>
             <p>Sequins embroidered jaal design.</p>
@@ -168,7 +148,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image3.jpeg">
+        <img src="image3.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Mysore Silk Saree</h2>
             <p>Heavy silk saree with elegant weaving.</p>
@@ -181,7 +161,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image4.jpeg">
+        <img src="image4.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Banarasi Silk Saree</h2>
             <p>Traditional Banarasi silk saree.</p>
@@ -194,7 +174,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image5.jpeg">
+        <img src="image5.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Viscos Rangoli Saree</h2>
             <p>Floral embroidery with mirror work.</p>
@@ -207,7 +187,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image6.jpeg">
+        <img src="image6.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Cotton Saree</h2>
             <p>Bandhej jacquard cotton saree.</p>
@@ -220,7 +200,7 @@ button{
     </div>
 
     <div class="card">
-        <img src="./image7.jpeg">
+        <img src="image7.jpeg" alt="saree" loading="lazy">
         <div class="content">
             <h2>Organza Saree</h2>
             <p>Digital print organza saree with zari border.</p>
@@ -235,7 +215,7 @@ button{
 </div>
 
 <!-- WHATSAPP BUTTON -->
-<a href=" https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX" target="_blank" class="whatsapp-btn">
+<a href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX" target="_blank" class="whatsapp-btn">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
