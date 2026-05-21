@@ -10,7 +10,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: "Segoe UI", Arial, sans-serif;
+font-family:"Segoe UI",Arial,sans-serif;
 }
 
 body{
@@ -74,8 +74,10 @@ position:relative;
 .hero::after{
 content:"";
 position:absolute;
-top:0;left:0;
-width:100%;height:100%;
+top:0;
+left:0;
+width:100%;
+height:100%;
 background:rgba(0,0,0,0.35);
 }
 
@@ -208,20 +210,24 @@ font-size:22px;
 
 <div class="navbar">
 <div class="logo">SS COLLECTIONS</div>
+
 <div class="nav-links">
-<a>Home</a>
-<a>Shop</a>
-<a>Wishlist</a>
+<a onclick="showHome()">Home</a>
+<a onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">Shop</a>
+<a onclick="showWishlist()">Wishlist</a>
 </div>
+
 </div>
 
 <div class="hero">
 <div class="hero-content">
 <h1>Summer 2026</h1>
 <p>Minimal • Elegant • Premium Ethnic Wear</p>
-<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX', '_blank') ">
+
+<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
 EXPLORE COLLECTION
 </button>
+
 </div>
 </div>
 
@@ -229,140 +235,136 @@ EXPLORE COLLECTION
 
 <div class="container">
 
+<!-- CARD 1 -->
 <div class="card">
 <img src="collections/image1.jpeg">
 <div class="content">
 <h3>Chanderi Silk Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 2 -->
 <div class="card">
 <img src="collections/image2.jpeg">
 <div class="content">
 <h3>Georgette Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1499</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 3 -->
 <div class="card">
 <img src="collections/image3.jpeg">
 <div class="content">
 <h3>Pure Silk Saree</h3>
 <p class="old">₹1499</p>
 <p class="price">₹999</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 4 -->
 <div class="card">
 <img src="collections/image4.jpeg">
 <div class="content">
 <h3>Kanchipuram Inspired Silk Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 5 -->
 <div class="card">
 <img src="collections/image5.jpeg">
 <div class="content">
-<h3>Saree Fabric -  Viscos Rangoli with Floral Wool Thread Embroidery Work with Real Mirror & Diamond 🪞 work scalloped lace border 
-</h3>
+<h3>Saree Fabric - Viscos Rangoli</h3>
 <p class="old">₹1400</p>
 <p class="price">₹949</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 6 -->
 <div class="card">
 <img src="collections/image6.jpeg">
 <div class="content">
-<h3>1-Contrast Thread weaving bandhej jacquard in full saree
-2-Rich pallu in saree with zari weaving &  minakari thread pattern
-3-cotton latkan in pallu with zari weaving border
-4-contrast blouse
+<h3>Bandhej Jacquard Saree</h3>
 <p class="old">₹1400</p>
 <p class="price">₹1049</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 7 -->
 <div class="card">
 <img src="collections/image7.jpeg">
 <div class="content">
-<h3> Launching new Organza floral digital print with sequence work & gold zari weaving border 
-Blouse - printed blouse</h3>
+<h3>Organza Floral Print Saree</h3>
 <p class="old">₹1400</p>
 <p class="price">₹999</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 8 -->
 <div class="card">
 <img src="collections/image8.jpeg">
 <div class="content">
-<h3> Soft pure Georgette handwork sarees 
-It has all over Handbrush Flowers  with  handwork (Khatli)  work 
-Saree is made with fully handwork  no any machinework  
-Pairs</h3>
+<h3>Soft Pure Georgette Saree</h3>
 <p class="old">₹1800</p>
 <p class="price">₹1349</p>
+
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 9 -->
 <div class="card">
-<img src="collections/image9.jpeg">
+<img src="./image9.jpeg">
 <div class="content">
-<h3> Pure Soft Rangoli silk Saree With Embroidery thered Work with contrast matching Blouse </h3>
+<h3>Pure Soft Rangoli Silk Saree</h3>
 <p class="old">₹1500</p>
 <p class="price">₹999</p>
-<div class="buttons">
-<button class="wishlist">WISHLIST</button>
-<a class="book" onclick="buyNow(this)">BUY</a>
-</div>
-</div>
-</div>
 
-<div class="card">
-<img src="collections/image10.jpeg">
-<div class="content">
-<h3> Georgette silk
-PATTERN-PRINTED REDY TO WEAR SAREE WITH SMALL LACE</h3>
-<p class="old">₹1500</p>
-<p class="price">₹899</p>
 <div class="buttons">
-<button class="wishlist">WISHLIST</button>
+<button class="wishlist" onclick="addToWishlist(this)">WISHLIST</button>
 <a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
@@ -372,26 +374,75 @@ PATTERN-PRINTED REDY TO WEAR SAREE WITH SMALL LACE</h3>
 
 <div class="footer">
 <h2>SS COLLECTIONS</h2>
-<p>Premium handcrafted ethnic wear</p>
+<p>NEW COLLECTION SAREES </p>
+<P> IF YOU WANT TO OREDER CLICK ON WHATSAPP ICON </P>
 </div>
 
-<a class="whatsapp-float" href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX">💬</a>
+<a class="whatsapp-float"
+href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX">
+💬
+</a>
 
 <script>
+
+let wishlistItems=[];
+
 function buyNow(btn){
-    let card = btn.closest(".card");
 
-    let name = card.querySelector("h3").innerText;
-    let price = card.querySelector(".price").innerText;
+let url="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX";
 
-    let message = `Hi, I want to buy this product:%0A%0AProduct: ${name}%0APrice: ${price}`;
-
-    let phone = "9298906668"; // change your number
-
-    let url = `https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX`;
-
-    window.open(url, "_blank");
+window.open(url,"_blank");
 }
+
+function addToWishlist(btn){
+
+let card=btn.closest(".card");
+
+let productName=card.querySelector("h3").innerText;
+
+if(!wishlistItems.includes(productName)){
+
+wishlistItems.push(productName);
+
+alert("Added to Wishlist");
+
+}
+
+}
+
+function showWishlist(){
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+let name=card.querySelector("h3").innerText;
+
+if(wishlistItems.includes(name)){
+card.style.display="block";
+}
+else{
+card.style.display="none";
+}
+
+});
+
+document.querySelector(".section-title").innerText="My Wishlist";
+
+}
+
+function showHome(){
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.display="block";
+
+});
+
+document.querySelector(".section-title").innerText="New Arrivals";
+
+}
+
 </script>
 
 </body>
