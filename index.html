@@ -146,9 +146,14 @@ background:orange;
 color:white;
 }
 
+/* FIXED BUY NOW STYLE */
 .book{
 background:green;
 color:white;
+text-decoration:none;
+display:inline-block;
+padding:10px;
+border-radius:5px;
 }
 
 .footer{
@@ -218,20 +223,16 @@ transition:0.2s;
 </div>
 
 <div class="navbar">
-
 <div class="logo">SS Collections</div>
 
 <div class="nav-links">
-
 <a onclick="filterProducts('all')">Home</a>
 <a onclick="filterProducts('summer')">Summer</a>
 <a onclick="filterProducts('trending')">Trending</a>
 <a onclick="filterProducts('premium')">Premium</a>
 <a onclick="filterProducts('sales')">Sales</a>
 <a onclick="showWishlist()">Wishlist ❤️</a>
-
 </div>
-
 </div>
 
 <div class="hero">
@@ -239,7 +240,6 @@ transition:0.2s;
 <h1>Summer Collection 2026</h1>
 <p>Latest Sarees Collection</p>
 
-<!-- ✅ ONLY CHANGE DONE HERE -->
 <button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
 Shop Now
 </button>
@@ -250,215 +250,116 @@ Shop Now
 
 <div class="container" id="products">
 
+<!-- CARD 1 -->
 <div class="card" data-price="1550" data-sale="yes">
 <img src="collections/image1.jpeg">
 <div class="content">
-<h3>
-    Premium Soft Chanderi cotton saree with classic floral concept weaving pallu and zari weaving border with all over weaving butties and Contrast blouse piece 
-</h3>
+<h3>Premium Soft Chanderi cotton saree...</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
 <div class="buttons">
 <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
+<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Premium%20Saree">Buy Now</a>
+<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
+
+</button>
 </div>
 </div>
 </div>
 
+<!-- CARD 2 -->
 <div class="card" data-price="1499" data-sale="yes">
 <img src="collections/image2.jpeg">
 <div class="content">
-<h3>Georgette Saree with all over sequins embroidered jaal  with cutwork multi thread cutwork design with diamond  with elegant pallu with georgett running  plain blouse </h3>
+<h3>Georgette Saree...</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1499</p>
 <div class="buttons">
 <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
+<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Georgette%20Saree">Buy Now</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 3 -->
 <div class="card" data-price="999" data-sale="no">
 <img src="collections/image3.jpeg">
 <div class="content">
-<h3> Beautiful heavy mysore silk saree with all over weaving and fantastic two tone padding border blouse same as border</h3>
+<h3>Beautiful heavy mysore silk saree</h3>
 <p class="old">₹1499</p>
 <p class="price">₹999</p>
 <div class="buttons">
 <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
+<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Silk%20Saree">Buy Now</a>
 </div>
 </div>
 </div>
 
+<!-- CARD 4 -->
 <div class="card" data-price="1550" data-sale="yes">
 <img src="collections/image4.jpeg">
 <div class="content">
-<h3> kanchipuram inspired silk sarees with unique colours combination all over weaving along with contrast khaddi border</h3>
+<h3>Kanchipuram inspired silk sarees</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
 <div class="buttons">
 <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
-</div>
-</div>
-</div>
-
-<! card5>
-<div class="card" data-price="949" data-sale="yes">
-<img src="collections/image5.jpeg">
-<div class="content">
-<h3> Viscos Rangoli with Floral Wool Thread Embroidery Work with Real Mirror & Diamond 🪞 work scalloped lace border </h3>
-<p class="old">₹1500</p>
-<p class="price">₹949</p>
-<div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
-</div>
-</div>
-</div>
-
-  <! card6>
-<div class="card" data-price="1050" data-sale="yes">
-<img src="collections/image6.jpeg">
-<div class="content">
-<h3> 1-Contrast Thread weaving bandhej jacquard in full saree
-2-Rich pallu in saree with zari weaving &  minakari thread pattern
-3-cotton latkan in pallu with zari weaving border
-4-contrast blouse </h3>
-<p class="old">₹1500</p>
-<p class="price">₹1050</p>
-<div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
-</div>
-</div>
-</div>
-
-<!card7>
-<div class="card" data-price="999" data-sale="yes">
-<img src="collections/image7.jpeg">
-<div class="content">
-<h3> Launching new Organza floral digital print with sequence work & gold zari weaving border </h3>
-<p class="old">₹1500</p>
-<p class="price">₹999</p>
-<div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
-</div>
-</div>
-</div>
- <!card8>
- <div class="card" data-price="1350" data-sale="yes">
-<img src="./image8.jpeg">
-<div class="content">
-<h3> Soft pure Georgette handwork sarees 
-It has all over Handbrush Flowers  with  handwork (Khatli)  work 
-Saree is made with fully handwork  no any machinework  
-Pairs </h3>
-<p class="old">₹1500</p>
-<p class="price">₹1350</p>
-<div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<button class="book">Buy Now</button>
+<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Kanchipuram%20Saree">Buy Now</a>
 </div>
 </div>
 </div>
 
 </div>
 
-<h2 class="section-title" id="wishlistTitle" style="display:none;">
-My Wishlist
-</h2>
+<h2 class="section-title" id="wishlistTitle" style="display:none;">My Wishlist</h2>
 
-<div class="container" id="wishlistContainer" style="display:none;">
-</div>
+<div class="container" id="wishlistContainer" style="display:none;"></div>
 
 <div class="footer">
-
 <h2>SS Collections</h2>
-<p> IF YOU WANT TO ORDER PRESS WHATSAPP BUTTON YOU CAN JOIN IN THAT YOU CAN ORDER</p>
 <p>Free shipping above ₹4000</p>
 <p>© 2026 SS Collections</p>
-
 </div>
 
-<!-- WhatsApp Floating Button -->
 <a class="whatsapp-float"
-   href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX"
-   target="_blank"
-   title="Chat on WhatsApp">
-   💬
-</a>
+href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX"
+target="_blank">💬</a>
 
 <script>
-
 function filterProducts(type){
-
 document.getElementById("wishlistTitle").style.display="none";
 document.getElementById("wishlistContainer").style.display="none";
 
 let cards=document.querySelectorAll("#products .card");
 
 cards.forEach(function(card){
-
 let price=parseInt(card.dataset.price);
 let sale=card.dataset.sale;
 
 card.style.display="none";
 
-if(type=="all"){
-card.style.display="block";
-}
-
-else if(type=="summer" && price<1000){
-card.style.display="block";
-}
-
-else if(type=="trending" && price<1500){
-card.style.display="block";
-}
-
-else if(type=="premium" && price>1500){
-card.style.display="block";
-}
-
-else if(type=="sales" && sale=="yes"){
-card.style.display="block";
-}
-
+if(type=="all") card.style.display="block";
+else if(type=="summer" && price<1000) card.style.display="block";
+else if(type=="trending" && price<1500) card.style.display="block";
+else if(type=="premium" && price>1500) card.style.display="block";
+else if(type=="sales" && sale=="yes") card.style.display="block";
 });
-
 }
 
 function addWishlist(button){
-
 let card=button.closest(".card");
-
 let copy=card.cloneNode(true);
-
 copy.querySelector(".wishlist").remove();
-
 document.getElementById("wishlistContainer").appendChild(copy);
-
 alert("Added to Wishlist");
-
 }
 
 function showWishlist(){
-
-let cards=document.querySelectorAll("#products .card");
-
-cards.forEach(function(card){
-card.style.display="none";
-});
-
+document.querySelectorAll("#products .card").forEach(c=>c.style.display="none");
 document.getElementById("wishlistTitle").style.display="block";
 document.getElementById("wishlistContainer").style.display="grid";
-
 }
-
 </script>
 
 </body>
-</html>dont change anything if i press buy now it should acess whatsapp link
+</html>
