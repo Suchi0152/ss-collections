@@ -6,363 +6,391 @@
 <title>SS Collections</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body{
-background:#f5f5f5;
+background:#ffffff;
+color:#111;
 }
 
+/* TOP BAR */
 .topbar{
-background:black;
-color:white;
-padding:10px;
+background:#111;
+color:#fff;
+padding:8px 30px;
 display:flex;
 justify-content:space-between;
-padding-left:30px;
-padding-right:30px;
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
+/* NAVBAR */
 .navbar{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
-background:white;
+padding:22px 40px;
+background:#fff;
 position:sticky;
 top:0;
+z-index:1000;
+border-bottom:1px solid #eee;
 }
 
 .logo{
-font-size:30px;
-font-style:italic;
-font-weight:bold;
+font-size:22px;
+letter-spacing:4px;
+font-weight:600;
+text-transform:uppercase;
 }
 
 .nav-links a{
-margin:15px;
+margin:0 14px;
 text-decoration:none;
-color:black;
-font-weight:bold;
+color:#111;
+font-size:14px;
+letter-spacing:1px;
 cursor:pointer;
 }
 
-.nav-links a:hover{
-color:red;
-}
-
 .hero{
-height:400px;
-background:url("./image1.jpeg");
-background-size:cover;
-background-position:center;
+height:85vh;
+background:url("./image1.jpeg") center/cover no-repeat;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-color:white;
-text-shadow:2px 2px 5px black;
+text-align:center;
+color:#fff;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.35);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
 }
 
 .hero h1{
-font-size:50px;
+font-size:52px;
+letter-spacing:3px;
+font-weight:400;
+}
+
+.hero p{
+margin-top:12px;
+font-size:16px;
+letter-spacing:2px;
 }
 
 .hero button{
-padding:15px 30px;
-margin-top:20px;
-border:none;
-background:red;
-color:white;
-font-size:18px;
-border-radius:5px;
+margin-top:25px;
+padding:12px 32px;
+border:1px solid #fff;
+background:transparent;
+color:#fff;
 cursor:pointer;
 }
 
 .section-title{
 text-align:center;
-margin:40px;
-font-size:30px;
+margin:70px 0 30px;
+font-size:18px;
+letter-spacing:3px;
+text-transform:uppercase;
 }
 
 .container{
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:25px;
-padding:30px;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+padding:0 60px 60px;
 }
 
 .card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
+background:#fff;
 }
 
 .card img{
 width:100%;
-height:300px;
+height:520px;
 object-fit:cover;
 }
 
 .content{
-padding:15px;
-text-align:center;
+padding:15px 5px;
 }
 
 .price{
-color:red;
-font-size:20px;
-font-weight:bold;
+font-weight:600;
 }
 
 .old{
 text-decoration:line-through;
-color:gray;
-font-size:14px;
+color:#999;
+font-size:12px;
 }
 
 .buttons{
 display:flex;
-justify-content:center;
-gap:10px;
-margin-top:15px;
+gap:12px;
+margin-top:12px;
 }
 
 button{
-padding:10px;
+padding:8px 14px;
 border:none;
-border-radius:5px;
+font-size:12px;
 cursor:pointer;
 }
 
 .wishlist{
-background:orange;
-color:white;
+background:#111;
+color:#fff;
 }
 
-/* FIXED BUY NOW STYLE */
 .book{
-background:green;
-color:white;
+background:transparent;
+border:1px solid #111;
+color:#111;
 text-decoration:none;
 display:inline-block;
-padding:10px;
-border-radius:5px;
+padding:8px 14px;
+font-size:12px;
+cursor:pointer;
 }
 
 .footer{
-background:black;
-color:white;
-padding:40px;
-margin-top:50px;
+background:#111;
+color:#fff;
 text-align:center;
+padding:50px;
+margin-top:80px;
 }
 
-.footer p{
-margin:10px;
-}
-
-@media(max-width:992px){
-.container{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.container{
-grid-template-columns:1fr;
-}
-.navbar{
-flex-direction:column;
-}
-.nav-links{
-margin-top:15px;
-}
-.hero h1{
-font-size:30px;
-}
-}
-
-/* WhatsApp Button */
 .whatsapp-float{
 position:fixed;
 bottom:20px;
 right:20px;
-width:60px;
-height:60px;
-background:#25D366;
-color:white;
+width:55px;
+height:55px;
+background:#111;
+color:#fff;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:30px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
 text-decoration:none;
-z-index:1000;
+font-size:22px;
 }
-
-.whatsapp-float:hover{
-transform:scale(1.1);
-transition:0.2s;
-}
-
 </style>
 </head>
 
 <body>
 
 <div class="topbar">
-<div>SS Collections</div>
+<div>SS COLLECTIONS</div>
+<div>PREMIUM ETHNIC WEAR</div>
 </div>
 
 <div class="navbar">
-<div class="logo">SS Collections</div>
-
+<div class="logo">SS COLLECTIONS</div>
 <div class="nav-links">
-<a onclick="filterProducts('all')">Home</a>
-<a onclick="filterProducts('summer')">Summer</a>
-<a onclick="filterProducts('trending')">Trending</a>
-<a onclick="filterProducts('premium')">Premium</a>
-<a onclick="filterProducts('sales')">Sales</a>
-<a onclick="showWishlist()">Wishlist ❤️</a>
+<a>Home</a>
+<a>Shop</a>
+<a>Wishlist</a>
 </div>
 </div>
 
 <div class="hero">
-
-<h1>Summer Collection 2026</h1>
-<p>Latest Sarees Collection</p>
-
-<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
-Shop Now
+<div class="hero-content">
+<h1>Summer 2026</h1>
+<p>Minimal • Elegant • Premium Ethnic Wear</p>
+<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX', '_blank') ">
+EXPLORE COLLECTION
 </button>
-
+</div>
 </div>
 
-<h2 class="section-title">Trending Products</h2>
+<h2 class="section-title">New Arrivals</h2>
 
-<div class="container" id="products">
+<div class="container">
 
-<!-- CARD 1 -->
-<div class="card" data-price="1550" data-sale="yes">
+<div class="card">
 <img src="collections/image1.jpeg">
 <div class="content">
-<h3>Premium Soft Chanderi cotton saree...</h3>
+<h3>Chanderi Silk Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
 <div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Premium%20Saree">Buy Now</a>
-<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
-
-</button>
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
-<!-- CARD 2 -->
-<div class="card" data-price="1499" data-sale="yes">
+<div class="card">
 <img src="collections/image2.jpeg">
 <div class="content">
-<h3>Georgette Saree...</h3>
+<h3>Georgette Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1499</p>
 <div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Georgette%20Saree">Buy Now</a>
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
-<!-- CARD 3 -->
-<div class="card" data-price="999" data-sale="no">
+<div class="card">
 <img src="collections/image3.jpeg">
 <div class="content">
-<h3>Beautiful heavy mysore silk saree</h3>
+<h3>Pure Silk Saree</h3>
 <p class="old">₹1499</p>
 <p class="price">₹999</p>
 <div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Silk%20Saree">Buy Now</a>
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
 </div>
 
-<!-- CARD 4 -->
-<div class="card" data-price="1550" data-sale="yes">
+<div class="card">
 <img src="collections/image4.jpeg">
 <div class="content">
-<h3>Kanchipuram inspired silk sarees</h3>
+<h3>Kanchipuram Inspired Silk Saree</h3>
 <p class="old">₹2000</p>
 <p class="price">₹1550</p>
 <div class="buttons">
-<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
-<a class="book" href="https://wa.me/919999999999?text=I%20want%20to%20buy%20Kanchipuram%20Saree">Buy Now</a>
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
 </div>
 </div>
-</div>
-<!-- CARD 5 --> <div class="card" data-price="949" data-sale="yes"> <img src="collections/image5.jpeg"> <div class="content"> <h3>Viscos Rangoli embroidery saree</h3> <p class="old">₹1500</p> <p class="price">₹949</p> <div class="buttons"> <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button> <button class="book" onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">Buy Now</button> </div> </div> </div> 
-<!-- CARD 6 --> <div class="card" data-price="1050" data-sale="yes"> <img src="collections/image6.jpeg"> <div class="content"> <h3>Bandhej jacquard saree</h3> <p class="old">₹1500</p> <p class="price">₹1050</p> <div class="buttons"> <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button> <button class="book" onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">Buy Now</button> </div> </div> </div> 
-  <!-- CARD 7 --> <div class="card" data-price="999" data-sale="yes"> <img src="collections/image7.jpeg"> <div class="content"> <h3>Organza floral digital print saree</h3> <p class="old">₹1500</p> <p class="price">₹999</p> <div class="buttons"> <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button> <button class="book" onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">Buy Now</button> </div> </div> </div>
-  <!-- CARD 8 --> <div class="card" data-price="1350" data-sale="yes"> <img src="./image8.jpeg"> <div class="content"> <h3>Soft pure Georgette handwork sarees</h3> <p class="old">₹1500</p> <p class="price">₹1350</p> <div class="buttons"> <button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button> <button class="book" onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">Buy Now</button> </div> </div> </div>
-
-  
 </div>
 
-<h2 class="section-title" id="wishlistTitle" style="display:none;">My Wishlist</h2>
+<div class="card">
+<img src="collections/image5.jpeg">
+<div class="content">
+<h3>Saree Fabric -  Viscos Rangoli with Floral Wool Thread Embroidery Work with Real Mirror & Diamond 🪞 work scalloped lace border 
+</h3>
+<p class="old">₹1400</p>
+<p class="price">₹949</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
 
-<div class="container" id="wishlistContainer" style="display:none;"></div>
+<div class="card">
+<img src="collections/image6.jpeg">
+<div class="content">
+<h3>1-Contrast Thread weaving bandhej jacquard in full saree
+2-Rich pallu in saree with zari weaving &  minakari thread pattern
+3-cotton latkan in pallu with zari weaving border
+4-contrast blouse
+<p class="old">₹1400</p>
+<p class="price">₹1049</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="collections/image7.jpeg">
+<div class="content">
+<h3> Launching new Organza floral digital print with sequence work & gold zari weaving border 
+Blouse - printed blouse</h3>
+<p class="old">₹1400</p>
+<p class="price">₹999</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="collections/image8.jpeg">
+<div class="content">
+<h3> Soft pure Georgette handwork sarees 
+It has all over Handbrush Flowers  with  handwork (Khatli)  work 
+Saree is made with fully handwork  no any machinework  
+Pairs</h3>
+<p class="old">₹1800</p>
+<p class="price">₹1349</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="collections/image9.jpeg">
+<div class="content">
+<h3> Pure Soft Rangoli silk Saree With Embroidery thered Work with contrast matching Blouse </h3>
+<p class="old">₹1500</p>
+<p class="price">₹999</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
+
+<div class="card">
+<img src="collections/image10.jpeg">
+<div class="content">
+<h3> Georgette silk
+PATTERN-PRINTED REDY TO WEAR SAREE WITH SMALL LACE</h3>
+<p class="old">₹1500</p>
+<p class="price">₹899</p>
+<div class="buttons">
+<button class="wishlist">WISHLIST</button>
+<a class="book" onclick="buyNow(this)">BUY</a>
+</div>
+</div>
+</div>
+
+</div>
 
 <div class="footer">
-<h2>SS Collections</h2>
-<p>Free shipping above ₹4000</p>
-<p>© 2026 SS Collections</p>
+<h2>SS COLLECTIONS</h2>
+<p>Premium handcrafted ethnic wear</p>
 </div>
 
-<a class="whatsapp-float"
-href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX"
-target="_blank">💬</a>
+<a class="whatsapp-float" href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX">💬</a>
 
 <script>
-function filterProducts(type){
-document.getElementById("wishlistTitle").style.display="none";
-document.getElementById("wishlistContainer").style.display="none";
+function buyNow(btn){
+    let card = btn.closest(".card");
 
-let cards=document.querySelectorAll("#products .card");
+    let name = card.querySelector("h3").innerText;
+    let price = card.querySelector(".price").innerText;
 
-cards.forEach(function(card){
-let price=parseInt(card.dataset.price);
-let sale=card.dataset.sale;
+    let message = `Hi, I want to buy this product:%0A%0AProduct: ${name}%0APrice: ${price}`;
 
-card.style.display="none";
+    let phone = "9298906668"; // change your number
 
-if(type=="all") card.style.display="block";
-else if(type=="summer" && price<1000) card.style.display="block";
-else if(type=="trending" && price<1500) card.style.display="block";
-else if(type=="premium" && price>1500) card.style.display="block";
-else if(type=="sales" && sale=="yes") card.style.display="block";
-});
-}
+    let url = `https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX`;
 
-function addWishlist(button){
-let card=button.closest(".card");
-let copy=card.cloneNode(true);
-copy.querySelector(".wishlist").remove();
-document.getElementById("wishlistContainer").appendChild(copy);
-alert("Added to Wishlist");
-}
-
-function showWishlist(){
-document.querySelectorAll("#products .card").forEach(c=>c.style.display="none");
-document.getElementById("wishlistTitle").style.display="block";
-document.getElementById("wishlistContainer").style.display="grid";
+    window.open(url, "_blank");
 }
 </script>
 
