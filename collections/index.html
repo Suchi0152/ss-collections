@@ -1,127 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SS Collections</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SS Collections</title>
 
 <style>
 
-/* HEADER */
-h1{
-    text-align:center;
-    color:black;
-    font-style:italic;
-    background-color:lightblue;
-    padding:15px;
-    margin:0;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
-/* GRID CONTAINER */
+body{
+background:#f5f5f5;
+}
+
+.topbar{
+background:black;
+color:white;
+padding:10px;
+display:flex;
+justify-content:space-between;
+padding-left:30px;
+padding-right:30px;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:white;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-style:italic;
+font-weight:bold;
+}
+
+.nav-links a{
+margin:15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+cursor:pointer;
+}
+
+.nav-links a:hover{
+color:red;
+}
+
+.hero{
+height:400px;
+background:url("./image1.jpeg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+text-shadow:2px 2px 5px black;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero button{
+padding:15px 30px;
+margin-top:20px;
+border:none;
+background:red;
+color:white;
+font-size:18px;
+border-radius:5px;
+cursor:pointer;
+}
+
+.section-title{
+text-align:center;
+margin:40px;
+font-size:30px;
+}
+
 .container{
-    display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:25px;
-    padding:30px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+padding:30px;
 }
 
-/* CARD DESIGN */
 .card{
-    background:#fff;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-    height:100%;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
-/* IMAGE */
 .card img{
-    width:100%;
-    height:280px;
-    object-fit:cover;
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
-/* CONTENT */
 .content{
-    padding:15px;
-    text-align:center;
-    flex:1;
+padding:15px;
+text-align:center;
 }
 
-.content h2{
-    margin:10px 0;
-    font-size:18px;
+.price{
+color:red;
+font-size:20px;
+font-weight:bold;
 }
 
-.content p{
-    font-size:14px;
-    color:#555;
+.old{
+text-decoration:line-through;
+color:gray;
+font-size:14px;
 }
 
-.content b{
-    display:block;
-    margin:10px 0;
-    color:#333;
-}
-
-/* BUTTONS */
 .buttons{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:10px;
+display:flex;
+justify-content:center;
+gap:10px;
+margin-top:15px;
 }
 
 button{
-    padding:10px 15px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:14px;
+padding:10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
 }
 
-.rate-btn{
-    background-color:orange;
-    color:white;
+.wishlist{
+background:orange;
+color:white;
 }
 
-.book-btn{
-    background-color:green;
-    color:white;
+.book{
+background:green;
+color:white;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-
-/* Tablet */
-@media (max-width: 992px){
-    .container{
-        grid-template-columns:repeat(2, 1fr);
-        padding:20px;
-    }
-
-    .card img{
-        height:250px;
-    }
+.footer{
+background:black;
+color:white;
+padding:40px;
+margin-top:50px;
+text-align:center;
 }
 
-/* Mobile */
-@media (max-width: 600px){
-    .container{
-        grid-template-columns:1fr;
-        padding:15px;
-    }
+.footer p{
+margin:10px;
+}
 
-    .card img{
-        height:220px;
-    }
+@media(max-width:992px){
+.container{
+grid-template-columns:repeat(2,1fr);
+}
+}
 
-    button{
-        font-size:13px;
-        padding:8px 12px;
-    }
+@media(max-width:600px){
+.container{
+grid-template-columns:1fr;
+}
+.navbar{
+flex-direction:column;
+}
+.nav-links{
+margin-top:15px;
+}
+.hero h1{
+font-size:30px;
+}
+}
+
+/* WhatsApp Button */
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+width:60px;
+height:60px;
+background:#25D366;
+color:white;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+text-decoration:none;
+z-index:1000;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+transition:0.2s;
 }
 
 </style>
@@ -129,102 +213,241 @@ button{
 
 <body>
 
-<h1>Sarees Collection</h1>
+<div class="topbar">
+<div>SS Collections</div>
+</div>
 
-<div class="container">
+<div class="navbar">
 
-    <div class="card">
-        <img src="./image1.jpeg">
-        <div class="content">
-            <h2>Chanderi Cotton</h2>
-            <p>Premium soft Chanderi cotton saree with floral weaving.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹1550/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
+<div class="logo">SS Collections</div>
 
-    <div class="card">
-        <img src="./image2.jpeg">
-        <div class="content">
-            <h2>Pure Georgette Saree</h2>
-            <p>Sequins embroidered jaal.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹1499/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
+<div class="nav-links">
 
-    <div class="card">
-        <img src="./image3 .jpeg">
-        <div class="content">
-            <h2>Mysore Silk Saree</h2>
-            <p>Heavy silk saree with elegant weaving.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹999/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="./image4.jpeg">
-        <div class="content">
-            <h2>Banarasi Silk Saree</h2>
-            <p>Traditional Banarasi silk saree.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹1550/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="./image5.jpeg">
-        <div class="content">
-            <h2>Viscos Rangoli Saree</h2>
-            <p>Floral embroidery work with mirror design.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹949/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="./image6.jpeg">
-        <div class="content">
-            <h2>Cotton Saree</h2>
-            <p>Bandhej jacquard cotton saree.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹1099/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="card">
-        <img src="./image7.jpeg">
-        <div class="content">
-            <h2>Organza Saree</h2>
-            <p>Digital print organza saree with zari border.</p>
-            <b>ALL COLORS AVAILABLE</b>
-            <div class="buttons">
-                <button class="rate-btn">₹999/-</button>
-                <button class="book-btn">Book Now</button>
-            </div>
-        </div>
-    </div>
+<a onclick="filterProducts('all')">Home</a>
+<a onclick="filterProducts('summer')">Summer</a>
+<a onclick="filterProducts('trending')">Trending</a>
+<a onclick="filterProducts('premium')">Premium</a>
+<a onclick="filterProducts('sales')">Sales</a>
+<a onclick="showWishlist()">Wishlist ❤️</a>
 
 </div>
+
+</div>
+
+<div class="hero">
+
+<h1>Summer Collection 2026</h1>
+<p>Latest Sarees Collection</p>
+
+<button onclick="window.open('https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX','_blank')">
+Shop Now
+</button>
+
+</div>
+
+<h2 class="section-title">Trending Products</h2>
+
+<div class="container" id="products">
+
+<div class="card" data-price="1550" data-sale="yes">
+<img src="./image1.jpeg">
+<div class="content">
+<h3>Premium Soft Chanderi cotton saree...</h3>
+<p class="old">₹2000</p>
+<p class="price">₹1550</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="1499" data-sale="yes">
+<img src="./image2.jpeg">
+<div class="content">
+<h3>Georgette Saree...</h3>
+<p class="old">₹2000</p>
+<p class="price">₹1499</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="999" data-sale="no">
+<img src="./image3.jpeg">
+<div class="content">
+<h3>Beautiful heavy mysore silk saree...</h3>
+<p class="old">₹1499</p>
+<p class="price">₹999</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="1550" data-sale="yes">
+<img src="./image4.jpeg">
+<div class="content">
+<h3>Kanchipuram inspired silk sarees...</h3>
+<p class="old">₹2000</p>
+<p class="price">₹1550</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="949" data-sale="yes">
+<img src="./image5.jpeg">
+<div class="content">
+<h3>Viscos Rangoli with Floral Work...</h3>
+<p class="old">₹1500</p>
+<p class="price">₹949</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="1050" data-sale="yes">
+<img src="./image6.jpeg">
+<div class="content">
+<h3>Bandhej jacquard saree...</h3>
+<p class="old">₹1500</p>
+<p class="price">₹1050</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="999" data-sale="yes">
+<img src="./image7.jpeg">
+<div class="content">
+<h3>Organza floral digital print...</h3>
+<p class="old">₹1500</p>
+<p class="price">₹999</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+<div class="card" data-price="1350" data-sale="yes">
+<img src="./image8.jpeg">
+<div class="content">
+<h3>Soft pure Georgette handwork sarees...</h3>
+<p class="old">₹1500</p>
+<p class="price">₹1350</p>
+<div class="buttons">
+<button class="wishlist" onclick="addWishlist(this)">♡ Wishlist</button>
+<button class="book" onclick="buyNow()">Buy Now</button>
+</div>
+</div>
+</div>
+
+</div>
+
+<h2 class="section-title" id="wishlistTitle" style="display:none;">
+My Wishlist
+</h2>
+
+<div class="container" id="wishlistContainer" style="display:none;">
+</div>
+
+<div class="footer">
+
+<h2>SS Collections</h2>
+<p>IF YOU WANT TO ORDER PRESS WHATSAPP BUTTON</p>
+<p>Free shipping above ₹4000</p>
+<p>© 2026 SS Collections</p>
+
+</div>
+
+<a class="whatsapp-float"
+   href="https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX"
+   target="_blank">
+   💬
+</a>
+
+<script>
+
+function filterProducts(type){
+
+document.getElementById("wishlistTitle").style.display="none";
+document.getElementById("wishlistContainer").style.display="none";
+
+let cards=document.querySelectorAll("#products .card");
+
+cards.forEach(function(card){
+
+let price=parseInt(card.dataset.price);
+let sale=card.dataset.sale;
+
+card.style.display="none";
+
+if(type=="all"){
+card.style.display="block";
+}
+else if(type=="summer" && price<1000){
+card.style.display="block";
+}
+else if(type=="trending" && price<1500){
+card.style.display="block";
+}
+else if(type=="premium" && price>1500){
+card.style.display="block";
+}
+else if(type=="sales" && sale=="yes"){
+card.style.display="block";
+}
+
+});
+
+}
+
+function addWishlist(button){
+
+let card=button.closest(".card");
+let copy=card.cloneNode(true);
+
+copy.querySelector(".wishlist").remove();
+
+document.getElementById("wishlistContainer").appendChild(copy);
+
+alert("Added to Wishlist");
+
+}
+
+function showWishlist(){
+
+let cards=document.querySelectorAll("#products .card");
+
+cards.forEach(function(card){
+card.style.display="none";
+});
+
+document.getElementById("wishlistTitle").style.display="block";
+document.getElementById("wishlistContainer").style.display="grid";
+
+}
+
+/* ✅ NEW FUNCTION ADDED */
+function buyNow(){
+    window.open(
+        "https://chat.whatsapp.com/Jq9qwYF856h8UfzyOVn5KX",
+        "_blank"
+    );
+}
+
+</script>
 
 </body>
 </html>
